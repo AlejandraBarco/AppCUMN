@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#454545"
-    tools:context=".login">
+    tools:context=".registro">
+
 
     <Button
         android:id="@+id/singin"
         android:layout_width="240dp"
         android:layout_height="63dp"
         android:backgroundTint="#006064"
-        android:text="@string/action_sign_in"
+        android:text="@string/action_log_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
@@ -25,7 +26,7 @@
         android:layout_width="229dp"
         android:layout_height="49dp"
         android:backgroundTint="#00FFFFFF"
-        android:text="@string/action_log_in"
+        android:text="@string/action_sign_in"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
         android:layout_width="262dp"
         android:layout_height="83dp"
         android:ems="10"
-        android:text="@string/textologin"
+        android:text="@string/textosingin"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -95,6 +96,5 @@
         app:layout_constraintEnd_toStartOf="@+id/login"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
