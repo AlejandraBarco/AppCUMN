@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Proyect</string>
+    <string name="action_sign_in">Iniciar sesión</string>
+    <string name="action_log_in">Suscríbete ya</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="action_sign_in_short">Iniciar sesión</string>
+    <string name="textologin">Iniciar sesión</string>
+
+
+</resources>
