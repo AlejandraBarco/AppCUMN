@@ -8,11 +8,11 @@
     tools:context=".login">
 
     <Button
-        android:id="@+id/singin"
-        android:layout_width="240dp"
-        android:layout_height="63dp"
+        android:id="@+id/login"
+        android:layout_width="359dp"
+        android:layout_height="55dp"
         android:backgroundTint="#006064"
-        android:text="@string/action_sign_in"
+        android:text="@string/action_log_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
@@ -21,18 +21,32 @@
         app:layout_constraintVertical_bias="0.059" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/singin"
         android:layout_width="229dp"
-        android:layout_height="49dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
         android:backgroundTint="#00FFFFFF"
-        android:text="@string/action_log_in"
+        android:text="@string/action_sing_in"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="134dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="64dp"
+        android:text="¿No tienes cuenta?"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/singin"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.71" />
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.911" />
 
     <EditText
         android:id="@+id/username"
@@ -74,7 +88,7 @@
         android:ems="10"
         android:text="@string/textologin"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,18 +97,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.705" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="147dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="80dp"
-        android:text="¿No tienes cuenta?"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/login"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
