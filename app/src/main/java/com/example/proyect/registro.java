@@ -161,7 +161,7 @@ public class registro extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Registro correcto", Toast.LENGTH_LONG).show();
 
-                            Intent intent = new Intent(registro.this, login.class);
+                            Intent intent = new Intent(registro.this, AppActivity.class);
                             startActivity(intent);
                         }
                         else {
