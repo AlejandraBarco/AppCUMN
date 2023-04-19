@@ -108,11 +108,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class registro extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-
     private Button botonLogin;
     private EditText etEmail, etPassword;
 
@@ -128,7 +129,6 @@ public class registro extends AppCompatActivity {
         botonLogin = findViewById(R.id.singin);
         etEmail = findViewById(R.id.username);
         etPassword = findViewById(R.id.password);
-
         botonLogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -160,7 +160,6 @@ public class registro extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Registro correcto", Toast.LENGTH_LONG).show();
-
                             Intent intent = new Intent(registro.this, AppActivity.class);
                             startActivity(intent);
                         }
@@ -179,25 +178,5 @@ public class registro extends AppCompatActivity {
         if(currentUser != null){
             //reload();
         }
-        /*String email = "test@test.com";
-        String password = "test123";
-
-        // Register new user
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(registro.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });*/
     }
 }

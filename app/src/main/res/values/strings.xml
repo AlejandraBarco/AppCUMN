@@ -4,6 +4,8 @@
     <string name="action_sing_in">Suscríbete</string>
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
+    <string name="nombre">User</string>
+    <string name="apellidos">Apellidos</string>
     <string name="action_sign_in_short">Iniciar sesión</string>
     <string name="textologin">Iniciar sesión</string>
     <string name="textosingin">Registrarse</string>
