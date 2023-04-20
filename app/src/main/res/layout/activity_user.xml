@@ -24,8 +24,10 @@
         android:id="@+id/button"
         android:layout_width="255dp"
         android:layout_height="48dp"
-        android:layout_marginTop="64dp"
-        android:text="Button"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#006064"
+        android:text="Mis mediciones"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon" />
@@ -34,8 +36,9 @@
         android:id="@+id/button2"
         android:layout_width="255dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:text="Button"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#006064"
+        android:text="Comunidad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -44,10 +47,25 @@
         android:id="@+id/button3"
         android:layout_width="255dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:text="Button"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#006064"
+        android:text="Perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="184dp"
+        android:backgroundTint="#006064"
+        android:text="Configuracion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

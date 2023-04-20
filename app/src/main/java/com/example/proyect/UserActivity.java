@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,11 +17,14 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UserActivity extends AppCompatActivity {
     private ImageButton icon;
+
+    private Button buttonMisMediciones;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         icon = findViewById(R.id.icon);
+        buttonMisMediciones =findViewById(R.id.button);
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +32,16 @@ public class UserActivity extends AppCompatActivity {
                 startActivity(new Intent(UserActivity.this,AppActivity.class));
             }
         });
+        buttonMisMediciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
+            }
+        });
+
+
+
+
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
