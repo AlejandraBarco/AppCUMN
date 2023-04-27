@@ -9,8 +9,8 @@
 
     <ImageButton
         android:id="@+id/icon"
-        android:layout_width="48dp"
-        android:layout_height="46dp"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="40dp"
         android:scaleType="fitCenter"
@@ -31,6 +31,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="415dp"
+        android:layout_height="621dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

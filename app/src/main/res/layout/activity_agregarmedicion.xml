@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#454545">
+    android:background="#454545"
+    android:scrollbarSize="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,6 +24,7 @@
             android:src="@drawable/usuario"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/editTextTextPersonName"
             android:layout_width="349dp"
@@ -372,7 +374,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/codesmells"/>
+            app:layout_constraintTop_toBottomOf="@+id/codesmells" />
 
         <TextView
             android:id="@+id/clasesconcretas"
@@ -402,7 +404,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clasesconcretas"/>
+            app:layout_constraintTop_toBottomOf="@+id/clasesconcretas" />
 
         <TextView
             android:id="@+id/clasesabstractas"
@@ -432,7 +434,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clasesabstractas"/>
+            app:layout_constraintTop_toBottomOf="@+id/clasesabstractas" />
 
         <Button
             android:id="@+id/button_agregar"
