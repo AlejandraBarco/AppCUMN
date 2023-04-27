@@ -9,6 +9,7 @@
     <string name="action_sign_in_short">Iniciar sesión</string>
     <string name="textologin">Iniciar sesión</string>
     <string name="textosingin">Registrarse</string>
+    <string name="seleccionar_tipo">Seleccionar tipo</string>
 
 
 </resources>

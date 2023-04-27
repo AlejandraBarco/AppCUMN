@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_elemento">
+        <item>Aplicación</item>
+        <item>Algoritmo</item>
+        <item>BBDD</item>
+        <item>Arquitectura</item>
+    </string-array>
+    <string-array name="tipos_tamano">
+        <item>XS</item>
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+    </string-array>
+</resources>
