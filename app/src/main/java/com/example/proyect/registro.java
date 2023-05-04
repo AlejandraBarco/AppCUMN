@@ -111,11 +111,17 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class registro extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
+
     private Button botonLogin;
-    private EditText etEmail, etPassword;
+    private EditText etEmail, etPassword,etName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,8 +131,10 @@ public class registro extends AppCompatActivity {
         // ...
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         botonLogin = findViewById(R.id.singin);
+        etName = findViewById(R.id.name);
         etEmail = findViewById(R.id.username);
         etPassword = findViewById(R.id.password);
         botonLogin.setOnClickListener(new View.OnClickListener() {
@@ -141,10 +149,15 @@ public class registro extends AppCompatActivity {
 
     private void registerUserAccount() {
 
-        String email, password;
-        email = etEmail.getText().toString();
-        password = etPassword.getText().toString();
+        String email, password, name;
+        email = etEmail.getText().toString().trim();
+        password = etPassword.getText().toString().trim();
+        name = etName.getText().toString().trim();
 
+        if (TextUtils.isEmpty(name)) {
+            Toast.makeText(getApplicationContext(), "Por favor introduzca un nombre", Toast.LENGTH_LONG).show();
+            return;
+        }
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(), "Por favor introduzca email", Toast.LENGTH_LONG).show();
             return;
@@ -159,6 +172,15 @@ public class registro extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            Map<String,Object> map = new HashMap<>();
+                            map.put("nombre",name);
+                            map.put("email",email);
+
+
+                            String id = mAuth.getCurrentUser().getUid();
+
+                            mDatabase.child("Usuarios").child(id).child("Perfil").setValue(map);
                             Toast.makeText(getApplicationContext(), "Registro correcto", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(registro.this, AppActivity.class);
                             startActivity(intent);

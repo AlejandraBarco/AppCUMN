@@ -7,11 +7,14 @@
     <TextView
         android:id="@+id/textview_nombre"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textColor="#006064" />
+
     <TextView
         android:id="@+id/textview_elemento"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/textview_herramienta"
         android:layout_width="match_parent"
@@ -52,7 +55,11 @@
         android:id="@+id/textview_abstractas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#006064"/>
     
     
 </LinearLayout>

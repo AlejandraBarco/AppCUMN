@@ -12,10 +12,12 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class agregarMedicion extends AppCompatActivity {
+    FirebaseAuth mAuth;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
     private ImageButton icon;
@@ -25,6 +27,7 @@ public class agregarMedicion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_agregarmedicion);
         icon = findViewById(R.id.menu);
         button_agregar = findViewById(R.id.button_agregar);
@@ -87,7 +90,7 @@ public class agregarMedicion extends AppCompatActivity {
         }
 
         Aplicacion aplicacion1 = new Aplicacion(a1,a2,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13);
-        myRef.child("Aplicaciones").push().setValue(aplicacion1);
+        myRef.child("Usuarios").child(mAuth.getCurrentUser().getUid()).child("Aplicaciones").push().setValue(aplicacion1);
         Toast.makeText(getApplicationContext(),"Datos enviados correctamente",Toast.LENGTH_SHORT).show();
         Intent i = new Intent(agregarMedicion.this,MeasuresActivity.class);
         startActivity(i);
