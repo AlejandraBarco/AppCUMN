@@ -18,13 +18,14 @@ import com.google.firebase.database.ValueEventListener;
 public class UserActivity extends AppCompatActivity {
     private ImageButton icon;
 
-    private Button buttonMisMediciones;
+    private Button buttonMisMediciones, buttonPrueba;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         icon = findViewById(R.id.icon);
         buttonMisMediciones =findViewById(R.id.button);
+        buttonPrueba =findViewById(R.id.button2);
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,9 +39,12 @@ public class UserActivity extends AppCompatActivity {
                 startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
             }
         });
-
-
-
+        buttonPrueba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
+            }
+        });
 
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();

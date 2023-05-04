@@ -87,7 +87,7 @@ public class agregarMedicion extends AppCompatActivity {
         }
 
         Aplicacion aplicacion1 = new Aplicacion(a1,a2,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13);
-        myRef.child("Aplicaciones").child(a1).setValue(aplicacion1);
+        myRef.child("Aplicaciones").push().setValue(aplicacion1);
         Toast.makeText(getApplicationContext(),"Datos enviados correctamente",Toast.LENGTH_SHORT).show();
         Intent i = new Intent(agregarMedicion.this,MeasuresActivity.class);
         startActivity(i);
