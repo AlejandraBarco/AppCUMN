@@ -79,13 +79,59 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="40dp"
             android:fontFamily="sans-serif-black"
-            android:text="Características de Calidad"
+            android:text="Características Avanzadas"
+            android:textColor="#006064"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_tamaño" />
+
+        <TextView
+            android:id="@+id/caracteristicasMantenibilidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Mantenibilidad"
             android:textColor="#006064"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.093"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edittext_clases" />
+
+        <TextView
+            android:id="@+id/caracteristicasDiseñoCalidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Calidad del Diseño"
+            android:textColor="#006064"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_duclicatedFiles" />
+
+        <TextView
+            android:id="@+id/característicasEnergia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Energía"
+            android:textColor="#006064"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_clasesabstractas" />
+
 
         <EditText
             android:id="@+id/edittext_herramienta"
@@ -238,7 +284,7 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner_tamaño" />
+            app:layout_constraintTop_toBottomOf="@+id/caracteristicasavanzadas" />
 
         <EditText
             android:id="@+id/edittext_codelines"
@@ -257,34 +303,34 @@
             app:layout_constraintTop_toBottomOf="@+id/codelines" />
 
         <TextView
-            android:id="@+id/funciones"
+            android:id="@+id/sentencias"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="sans-serif-black"
-            android:text="Número de funciones"
+            android:text="Número de sentencias"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edittext_codelines" />
 
         <EditText
-            android:id="@+id/edittext_funciones"
+            android:id="@+id/edittext_sentencias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"
             android:backgroundTint="#006064"
-            android:hint="Ingrese nº de funciones"
+            android:hint="Ingrese nº de sentencias"
             android:inputType="text"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/funciones" />
+            app:layout_constraintTop_toBottomOf="@+id/sentencias" />
 
         <TextView
             android:id="@+id/metodos"
@@ -298,7 +344,7 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edittext_funciones" />
+            app:layout_constraintTop_toBottomOf="@+id/edittext_sentencias" />
 
         <EditText
             android:id="@+id/edittext_metodos"
@@ -358,7 +404,7 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/caracteristicasavanzadas" />
+            app:layout_constraintTop_toBottomOf="@+id/caracteristicasMantenibilidad" />
 
         <EditText
             android:id="@+id/edittext_codesmells"
@@ -377,6 +423,65 @@
             app:layout_constraintTop_toBottomOf="@+id/codesmells" />
 
         <TextView
+            android:id="@+id/duclicatedLines"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Número de líneas duplicadas (opcional)"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_codesmells" />
+
+        <EditText
+            android:id="@+id/edittext_duclicatedLines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#006064"
+            android:hint="Ingrese el nº de líneas duplicadas"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duclicatedLines" />
+        <TextView
+            android:id="@+id/duclicatedFiles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Número de archivos duplicados (opcional)"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_duclicatedLines" />
+
+        <EditText
+            android:id="@+id/edittext_duclicatedFiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#006064"
+            android:hint="Ingrese el nº de archivos duplicados"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duclicatedFiles" />
+
+        <TextView
             android:id="@+id/clasesconcretas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -388,7 +493,7 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edittext_codesmells" />
+            app:layout_constraintTop_toBottomOf="@+id/caracteristicasDiseñoCalidad" />
 
         <EditText
             android:id="@+id/edittext_clasesconcretas"
@@ -435,6 +540,35 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clasesabstractas" />
+        <TextView
+            android:id="@+id/CPU"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Consumo de la CPU"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/característicasEnergia" />
+
+        <EditText
+            android:id="@+id/edittext_CPU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#006064"
+            android:hint="Ingrese el consumo de CPU"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CPU" />
 
         <Button
             android:id="@+id/button_agregar"
@@ -446,7 +580,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edittext_clasesabstractas" />
+            app:layout_constraintTop_toBottomOf="@+id/edittext_CPU" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

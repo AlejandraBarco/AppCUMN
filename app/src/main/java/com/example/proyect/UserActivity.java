@@ -30,7 +30,7 @@ public class UserActivity extends AppCompatActivity {
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserActivity.this,AppActivity.class));
+                startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
             }
         });
         buttonMisMediciones.setOnClickListener(new View.OnClickListener() {

@@ -14,7 +14,11 @@
     <TextView
         android:id="@+id/textview_elemento"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="#006064"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        android:textSize="15sp" />
     <TextView
         android:id="@+id/textview_herramienta"
         android:layout_width="match_parent"

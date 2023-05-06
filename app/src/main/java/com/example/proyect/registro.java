@@ -182,7 +182,7 @@ public class registro extends AppCompatActivity {
 
                             mDatabase.child("Usuarios").child(id).child("Perfil").setValue(map);
                             Toast.makeText(getApplicationContext(), "Registro correcto", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(registro.this, AppActivity.class);
+                            Intent intent = new Intent(registro.this, MeasuresActivity.class);
                             startActivity(intent);
                         }
                         else {

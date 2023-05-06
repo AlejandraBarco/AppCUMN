@@ -37,7 +37,7 @@ public class agregarMedicion extends AppCompatActivity {
         arg5 = findViewById(R.id.edittext_unidad);
         arg6 = findViewById(R.id.spinner_tamaño);
         arg7 = findViewById(R.id.edittext_codelines);
-        arg8 = findViewById(R.id.edittext_funciones);
+        arg8 = findViewById(R.id.edittext_sentencias);
         arg9 = findViewById(R.id.edittext_metodos);
         arg10 = findViewById(R.id.edittext_clases);
         arg11 = findViewById(R.id.edittext_codesmells);
