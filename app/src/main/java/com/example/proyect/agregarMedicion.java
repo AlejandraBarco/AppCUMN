@@ -21,7 +21,7 @@ public class agregarMedicion extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
     private ImageButton icon;
-    private EditText arg1,arg4,arg5,arg7,arg8,arg9,arg10,arg11,arg12,arg13;
+    private EditText arg1,arg4,arg5,arg7,arg8,arg9,arg10,arg11,arg12,arg13,arg14,arg15,arg16;
     private Spinner arg2,arg6;
     private Button button_agregar;
     @Override
@@ -43,6 +43,9 @@ public class agregarMedicion extends AppCompatActivity {
         arg11 = findViewById(R.id.edittext_codesmells);
         arg12 = findViewById(R.id.edittext_clasesconcretas);
         arg13 = findViewById(R.id.edittext_clasesabstractas);
+        arg14 = findViewById(R.id.edittext_duclicatedLines);
+        arg15 = findViewById(R.id.edittext_duclicatedFiles);
+        arg16 = findViewById(R.id.edittext_cpu);
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +60,7 @@ public class agregarMedicion extends AppCompatActivity {
     }
     private void agregar(){
         String a1,a2,a4,a5,a6;
-        int a7,a8,a9,a10,a11,a12,a13;
+        int a7,a8,a9,a10,a11,a12,a13,a14,a15,a16;
         a1 = arg1.getText().toString();
         a2 = arg2.getItemAtPosition(arg2.getSelectedItemPosition()).toString();
         a4 = arg4.getText().toString();
@@ -70,6 +73,9 @@ public class agregarMedicion extends AppCompatActivity {
         a11 = Integer.parseInt(arg11.getText().toString());
         a12 = Integer.parseInt(arg12.getText().toString());
         a13 = Integer.parseInt(arg13.getText().toString());
+        a14 = Integer.parseInt(arg14.getText().toString());
+        a15 = Integer.parseInt(arg15.getText().toString());
+        a16 = Integer.parseInt(arg16.getText().toString());
 
         if(TextUtils.isEmpty(a1)){
             Toast.makeText(getApplicationContext(),"Introduce un nombre válido",Toast.LENGTH_SHORT).show();
@@ -89,7 +95,7 @@ public class agregarMedicion extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Introduce un valor válido para los codesmells",Toast.LENGTH_SHORT).show();
         }
 
-        Aplicacion aplicacion1 = new Aplicacion(a1,a2,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13);
+        Aplicacion aplicacion1 = new Aplicacion(a1,a2,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16);
         myRef.child("Usuarios").child(mAuth.getCurrentUser().getUid()).child("Aplicaciones").push().setValue(aplicacion1);
         Toast.makeText(getApplicationContext(),"Datos enviados correctamente",Toast.LENGTH_SHORT).show();
         Intent i = new Intent(agregarMedicion.this,MeasuresActivity.class);

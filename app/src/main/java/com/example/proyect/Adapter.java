@@ -35,12 +35,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AppsHolder> {
         holder.medida.setText(app.getMedida());
         holder.tamaño.setText(app.getTamaño());
         holder.codelines.setText(String.valueOf(app.getCodelines()));
-        holder.funciones.setText(String.valueOf(app.getCodelines()));
-        holder.metodos.setText(String.valueOf(app.getCodelines()));
-        holder.clases.setText(String.valueOf(app.getCodelines()));
-        holder.codesmells.setText(String.valueOf(app.getCodelines()));
-        holder.concretas.setText(String.valueOf(app.getCodelines()));
-        holder.abstractas.setText(String.valueOf(app.getCodelines()));
+        holder.sentencias.setText(String.valueOf(app.getSentencias()));
+        holder.metodos.setText(String.valueOf(app.getMetodos()));
+        holder.clases.setText(String.valueOf(app.getClases()));
+        holder.codesmells.setText(String.valueOf(app.getCodesmells()));
+        holder.concretas.setText(String.valueOf(app.getConcretas()));
+        holder.abstractas.setText(String.valueOf(app.getAbstractas()));
+        holder.duplicatedLines.setText(String.valueOf(app.getDuplicatedLines()));
+        holder.duplicatedFiles.setText(String.valueOf(app.getDuplicatedFiles()));
+        holder.CPU.setText(String.valueOf(app.getCpu()));
     }
 
     @Override
@@ -50,8 +53,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AppsHolder> {
 
     public static class AppsHolder extends RecyclerView.ViewHolder{
 
-        TextView nombre,elemento,herramienta,medida,tamaño,codelines,funciones,
-                metodos,clases,codesmells,concretas,abstractas;
+        TextView nombre,elemento,herramienta,medida,tamaño,codelines,sentencias,
+                metodos,clases,codesmells,concretas,abstractas, duplicatedLines, duplicatedFiles, CPU;
 
 
         public AppsHolder(View itemView){
@@ -62,12 +65,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AppsHolder> {
             medida = (TextView) itemView.findViewById(R.id.textview_medida);
             tamaño = (TextView) itemView.findViewById(R.id.textview_tamaño);
             codelines = (TextView) itemView.findViewById(R.id.textview_codelines);
-            funciones = (TextView) itemView.findViewById(R.id.textview_funciones);
+            sentencias = (TextView) itemView.findViewById(R.id.textview_sentencias);
             metodos = (TextView) itemView.findViewById(R.id.metodos);
             clases = (TextView) itemView.findViewById(R.id.textview_clases);
             codesmells = (TextView) itemView.findViewById(R.id.textview_codesmells);
             concretas = (TextView) itemView.findViewById(R.id.textview_concretas);
             abstractas = (TextView) itemView.findViewById(R.id.textview_abstractas);
+            duplicatedLines = (TextView) itemView.findViewById(R.id.textview_duplicatedLines);
+            duplicatedFiles = (TextView) itemView.findViewById(R.id.textview_duplicatedFiles);
+            CPU = (TextView) itemView.findViewById(R.id.textview_CPU);
 
         }
     }

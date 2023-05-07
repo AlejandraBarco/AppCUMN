@@ -7,32 +7,41 @@ public class Aplicacion {
     public String medida;
     public String tamaño;
     public int codelines;
-    public int funciones;
+    public int sentencias;
     public int metodos;
     public int clases;
     public int codesmells;
     public int concretas;
+
     public int abstractas;
 
-    public Aplicacion(String nombre, String elemento ,String herramienta, String medida, String tamaño, int codelines, int funciones, int metodos, int clases,
-                      int codesmells, int concretas, int abstractas) {
+    public int duplicatedLines;
+
+    public int duplicatedFiles;
+
+    public int cpu;
+    public Aplicacion(String nombre, String elemento ,String herramienta, String medida, String tamaño, int codelines, int sentencias, int metodos, int clases,
+                      int codesmells, int concretas, int abstractas, int duplicatedLines, int duplicatedFiles,int cpu) {
         this.nombre = nombre;
         this.elemento = elemento;
         this.herramienta = herramienta;
         this.medida = medida;
         this.tamaño = tamaño;
         this.codelines = codelines;
-        this.funciones = funciones;
+        this.sentencias = sentencias;
         this.metodos = metodos;
         this.clases = clases;
         this.codesmells = codesmells;
         this.concretas = concretas;
         this.abstractas = abstractas;
+        this.duplicatedLines = duplicatedLines;
+        this.duplicatedFiles = duplicatedFiles;
+        this.cpu = cpu;
     }
     public Aplicacion() {
     }
 
-/*public Aplicacion(String nombre, String elemento,String herramienta,  String medida,int codelines, int funciones, int metodos, int clases,int codesmells) {
+/*public Aplicacion(String nombre, String elemento,String herramienta,  String medida,int codelines, int funciones, int metodos, int clases,int codesmells, int CPU) {
         this.nombre = nombre;
         this.elemento = elemento;
         this.herramienta = herramienta;
@@ -71,8 +80,8 @@ public class Aplicacion {
         return codelines;
     }
 
-    public int getFunciones() {
-        return funciones;
+    public int getSentencias() {
+        return sentencias;
     }
 
     public int getMetodos() {
@@ -93,6 +102,30 @@ public class Aplicacion {
 
     public int getAbstractas() {
         return abstractas;
+    }
+
+    public int getDuplicatedLines() {
+        return duplicatedLines;
+    }
+
+    public int getDuplicatedFiles() {
+        return duplicatedFiles;
+    }
+
+    public int getCpu() {
+        return cpu;
+    }
+
+    public void setDuplicatedLines(int duplicatedLines) {
+        this.duplicatedLines = duplicatedLines;
+    }
+
+    public void setDuplicatedFiles(int duplicatedFiles) {
+        this.duplicatedFiles = duplicatedFiles;
+    }
+
+    public void setCpu(int cpu) {
+        this.cpu = cpu;
     }
 
     public void setNombre(String nombre) {
@@ -119,8 +152,8 @@ public class Aplicacion {
         this.codelines = codelines;
     }
 
-    public void setFunciones(int funciones) {
-        this.funciones = funciones;
+    public void setSentencias(int sentencias) {
+        this.sentencias = sentencias;
     }
 
     public void setMetodos(int metodos) {

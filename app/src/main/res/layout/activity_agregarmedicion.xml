@@ -541,21 +541,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clasesabstractas" />
         <TextView
-            android:id="@+id/CPU"
+            android:id="@+id/cpu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="sans-serif-black"
-            android:text="Consumo de la CPU"
+            android:text="Consumo de la CPU x100000000"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/característicasEnergia" />
 
         <EditText
-            android:id="@+id/edittext_CPU"
+            android:id="@+id/edittext_cpu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -568,7 +568,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CPU" />
+            app:layout_constraintTop_toBottomOf="@+id/cpu" />
 
         <Button
             android:id="@+id/button_agregar"
@@ -580,7 +580,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edittext_CPU" />
+            app:layout_constraintTop_toBottomOf="@+id/edittext_cpu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
