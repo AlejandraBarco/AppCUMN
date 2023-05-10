@@ -18,19 +18,20 @@ import com.google.firebase.database.ValueEventListener;
 public class UserActivity extends AppCompatActivity {
     private ImageButton icon;
 
-    private Button buttonMisMediciones, buttonComunidad;
+    private Button buttonMisMediciones, buttonTodasMediciones, buttonPerfil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         icon = findViewById(R.id.icon);
         buttonMisMediciones =findViewById(R.id.button);
-        buttonComunidad =findViewById(R.id.button2);
+        buttonTodasMediciones =findViewById(R.id.button2);
+        buttonPerfil = findViewById(R.id.button3);
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
+                startActivity(new Intent(UserActivity.this,Perfil.class));
             }
         });
         buttonMisMediciones.setOnClickListener(new View.OnClickListener() {
@@ -39,13 +40,18 @@ public class UserActivity extends AppCompatActivity {
                 startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
             }
         });
-        buttonComunidad.setOnClickListener(new View.OnClickListener() {
+        buttonTodasMediciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(UserActivity.this,AppActivity.class));
             }
         });
-
+        buttonPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserActivity.this,Perfil.class));
+            }
+        });
     }
 
 }

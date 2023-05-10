@@ -26,6 +26,7 @@ public class AppActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ImageButton icon;
     private FloatingActionButton plus;
+    //private Button verMas;
     private RecyclerView recyclerView;
     private List<Aplicacion> apps;
     private Adapter2 adapter;
@@ -36,6 +37,8 @@ public class AppActivity extends AppCompatActivity {
         icon = findViewById(R.id.icon);
         plus = findViewById(R.id.plus);
         mAuth = FirebaseAuth.getInstance();
+        //setContentView(R.layout.row_recycler2);
+        //verMas = findViewById(R.id.button);
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +52,12 @@ public class AppActivity extends AppCompatActivity {
                 startActivity(new Intent(AppActivity.this, agregarMedicion.class));
             }
         });
+        /*verMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AppActivity.this, MeasuresActivity.class));
+            }
+        });*/
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

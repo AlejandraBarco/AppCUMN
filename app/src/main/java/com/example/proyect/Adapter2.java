@@ -1,8 +1,14 @@
 package com.example.proyect;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,9 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder> {
+public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder>  {
+
 
     List<Aplicacion> apps;
+
 
     public Adapter2(List<Aplicacion> apps) {
         this.apps = apps;
@@ -31,6 +39,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder> {
         Aplicacion app = apps.get(position);
         holder.nombre.setText(app.getNombre());
         holder.cpu.setText(String.valueOf(app.getCpu()));
+        holder.setOnClickListener();
     }
 
     @Override
@@ -38,16 +47,34 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder> {
         return apps.size();
     }
 
-    public static class AppsHolder extends RecyclerView.ViewHolder{
-
+    public static class AppsHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        //context
+        Context context;
         TextView nombre, cpu;
+        Button button;
 
 
         public AppsHolder(View itemView){
             super(itemView);
+            context = itemView.getContext();
             nombre = (TextView) itemView.findViewById(R.id.textview_nombre);
             cpu = (TextView) itemView.findViewById(R.id.textview_cpu);
+            button = (Button) itemView.findViewById(R.id.button);
 
+        }
+        void setOnClickListener(){
+            button.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent  intent = new Intent(context,MeasuresActivitySingular.class);
+            //intent.putExtra("nombre",itemView.findViewById(R.id.textview_nombre).toString());
+            //Bundle dato = new Bundle();
+            //dato.putString("nombre", "tio Pedro");
+            //intent.putExtras(dato);
+            intent.putExtra("App",nombre.getText());
+            context.startActivity(intent);
         }
     }
 }

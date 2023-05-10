@@ -5,8 +5,8 @@
     android:id="@+id/re"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#454545"
-    tools:context=".MeasuresActivity">
+    android:background="#5C8A8C"
+    tools:context=".MeasuresActivitySingular">
 
     <ImageButton
         android:id="@+id/icon"

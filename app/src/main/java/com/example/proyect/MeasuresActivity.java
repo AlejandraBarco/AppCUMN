@@ -72,7 +72,6 @@ public class MeasuresActivity extends AppCompatActivity {
                 for (DataSnapshot ds: dataSnapshot.getChildren()) {
                     Aplicacion app = ds.getValue(Aplicacion.class);
                     apps.add(app);
-
                 }
                 adapter.notifyDataSetChanged();
             }

@@ -2,19 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="20sp"
+    android:background="#5C8A8C"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/textview_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25sp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
-        android:textColor="#006064" />
+        android:textColor="#D0F1F3" />
+
     <TextView
         android:id="@+id/elemento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
         android:fontFamily="sans-serif-black"
         android:text="Tipo de elemento"
         android:textSize="20sp" />
@@ -25,7 +31,18 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#006064"
         android:textAlignment="center"
+        android:layout_marginTop="20sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/herramienta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Herramienta"
         android:textSize="20sp" />
 
     <TextView
@@ -34,6 +51,16 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp" />
+    <TextView
+        android:id="@+id/medida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Medida"
         android:textSize="20sp" />
 
     <TextView
@@ -42,31 +69,68 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"/>
+    <TextView
+        android:id="@+id/tamano"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Tamaño"
         android:textSize="20sp" />
-
     <TextView
         android:id="@+id/textview_tamaño"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"/>
+    <TextView
+        android:id="@+id/codelines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Líneas de código"
         android:textSize="20sp" />
-
     <TextView
         android:id="@+id/textview_codelines"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="15sp" />
-
+        android:textSize="20sp"
+        android:layout_marginTop="20sp" />
+    <TextView
+        android:id="@+id/sentencias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Sentencias"
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/textview_sentencias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"/>
+    <TextView
+        android:id="@+id/metodos1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Metodos"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/metodos"
@@ -74,6 +138,17 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+         />
+    <TextView
+        android:id="@+id/clases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Clases en total"
         android:textSize="20sp" />
 
     <TextView
@@ -82,6 +157,17 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+         />
+    <TextView
+        android:id="@+id/codesmells"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="CodeSmells"
         android:textSize="20sp" />
 
     <TextView
@@ -90,6 +176,17 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/duplicatedLines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Líneas duplicadas"
         android:textSize="20sp" />
     <TextView
         android:id="@+id/textview_duplicatedLines"
@@ -97,40 +194,86 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/duplicatedFiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Ficheros duplicados"
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/textview_duplicatedFiles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/concretas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Clases concretas"
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/textview_concretas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/abstractas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="10sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Clases concretas"
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/textview_abstractas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/cpu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:text="Consumo de la CPU"
+        android:textSize="20sp" />
+
     <TextView
         android:id="@+id/textview_CPU"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="#006064"/>
+        android:layout_marginTop="25sp" />
     
     
 </LinearLayout>

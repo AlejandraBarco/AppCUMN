@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="20sp"
+    android:background="#5C8A8C"
     android:orientation="vertical">
 
     <TextView
@@ -10,14 +12,14 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
-        android:textColor="#006064" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textview_cpu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
 
     <Button
@@ -32,7 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginTop="25sp"
-        android:background="@drawable/border"
         android:foregroundTint="#006064"
         android:foregroundTintMode="multiply"
         android:longClickable="false" />
