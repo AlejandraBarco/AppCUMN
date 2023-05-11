@@ -68,7 +68,9 @@ public class MeasuresActivitySingular extends AppCompatActivity {
         apps = new ArrayList<>();
 
         String id = mAuth.getCurrentUser().getUid();
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child("NUvBEcZNbNcfjnqG3C6");
+        String id1= (String) "-NUvBEcZNbNcfjnqG3C6";
+        //DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(id1);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(id1);
 
 
         adapter = new Adapter(apps);
