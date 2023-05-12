@@ -63,26 +63,24 @@ public class MeasuresActivitySingular extends AppCompatActivity {
             }
         });
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        apps = new ArrayList<>();
 
         String id = mAuth.getCurrentUser().getUid();
         String id1= (String) "-NUvBEcZNbNcfjnqG3C6";
         //DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(id1);
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(id1);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones");
 
 
         adapter = new Adapter(apps);
         recyclerView.setAdapter(adapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                apps.removeAll(apps);
-                for (DataSnapshot ds: dataSnapshot.getChildren()) {
-                    Aplicacion app = ds.getValue(Aplicacion.class);
-                    apps.add(app);
+                if(dataSnapshot.exists()){
+                    String nombre = dataSnapshot.child("nombre").getValue().toString();
+                    String email = dataSnapshot.child("email").getValue().toString();
+                    //textView.setText(nombre);
+                    //editText.setText(email);
+
                 }
-                adapter.notifyDataSetChanged();
             }
 
             @Override

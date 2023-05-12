@@ -60,7 +60,8 @@ public class agregarMedicion extends AppCompatActivity {
     }
     private void agregar(){
         String a1,a2,a4,a5,a6;
-        int a7,a8,a9,a10,a11,a12,a13,a14,a15,a16;
+        int a7,a8,a9,a10,a11,a12,a13,a14,a15;
+        Double a16;
         a1 = arg1.getText().toString();
         a2 = arg2.getItemAtPosition(arg2.getSelectedItemPosition()).toString();
         a4 = arg4.getText().toString();
@@ -75,7 +76,8 @@ public class agregarMedicion extends AppCompatActivity {
         a13 = Integer.parseInt(arg13.getText().toString());
         a14 = Integer.parseInt(arg14.getText().toString());
         a15 = Integer.parseInt(arg15.getText().toString());
-        a16 = Integer.parseInt(arg16.getText().toString());
+        a16 = Double.parseDouble(arg16.getText().toString());
+
 
         if(TextUtils.isEmpty(a1)){
             Toast.makeText(getApplicationContext(),"Introduce un nombre válido",Toast.LENGTH_SHORT).show();

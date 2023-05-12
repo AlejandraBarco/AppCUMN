@@ -548,7 +548,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="sans-serif-black"
-            android:text="Consumo de la CPU x100000000"
+            android:text="Consumo de la CPU"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

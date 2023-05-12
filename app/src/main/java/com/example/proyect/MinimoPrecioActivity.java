@@ -1,8 +1,6 @@
 package com.example.proyect;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,8 +21,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-public class PruebaPrecios extends Activity {
+public class MinimoPrecioActivity extends AppCompatActivity {
 
     private TextView mJsonTxtView,txt1,txt2,txt3,txt4,txt5,txt6;
     private TextView min;
@@ -35,7 +32,7 @@ public class PruebaPrecios extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_precios);
+        setContentView(R.layout.activity_minimo_precio);
         icon = findViewById(R.id.icon);
         plus = findViewById(R.id.plus);
         Ver = findViewById(R.id.button);
@@ -48,24 +45,26 @@ public class PruebaPrecios extends Activity {
         txt6 = findViewById(R.id.jsonText8);
         min = findViewById(R.id.textView2);
         this.getPrecio();
+
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PruebaPrecios.this,UserActivity.class));
+                startActivity(new Intent(MinimoPrecioActivity.this,UserActivity.class));
             }
         });
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PruebaPrecios.this, agregarMedicion.class));
+                startActivity(new Intent(MinimoPrecioActivity.this, agregarMedicion.class));
             }
         });
         Ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PruebaPrecios.this, MinimoPrecioActivity.class));
+                startActivity(new Intent(MinimoPrecioActivity.this, PruebaPrecios.class));
             }
         });
+
     }
 
     private void getPrecio(){
@@ -73,7 +72,7 @@ public class PruebaPrecios extends Activity {
                 .baseUrl("https://api.preciodelaluz.org/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
+        JsonPlaceHolderApiMin jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApiMin.class);
 
         Call <Data> call = jsonPlaceHolderApi.getPrecio();
         call.enqueue(new Callback<Data>() {
