@@ -26,7 +26,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="45dp"
         android:backgroundTint="#006064"
-        android:text="Todas mis medidas"
+        android:text="Precios"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="70dp"
         android:backgroundTint="#006064"
-        android:text="Medidas"
+        android:text="Aplicaciones Medidas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon" />
@@ -49,7 +49,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="45dp"
         android:backgroundTint="#006064"
-        android:text="Perfil"
+        android:text="Green Developer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -58,14 +58,25 @@
         android:id="@+id/button5"
         android:layout_width="255dp"
         android:layout_height="48dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="84dp"
         android:backgroundTint="#006064"
-        android:text="Configuracion"
+        android:text="Perfil"
+        android:layout_marginTop="45dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#006064"
+        android:text="Todas las medidas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

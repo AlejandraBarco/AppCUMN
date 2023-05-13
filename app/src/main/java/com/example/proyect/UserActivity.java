@@ -18,38 +18,51 @@ import com.google.firebase.database.ValueEventListener;
 public class UserActivity extends AppCompatActivity {
     private ImageButton icon;
 
-    private Button buttonMisMediciones, buttonTodasMediciones, buttonPerfil;
+    private Button buttonMisMediciones, buttonTodasMediciones, buttonPerfil,buttonGreenDeveloper,buttonPrecios;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         icon = findViewById(R.id.icon);
-        buttonMisMediciones =findViewById(R.id.button);
-        buttonTodasMediciones =findViewById(R.id.button2);
-        buttonPerfil = findViewById(R.id.button3);
-
+        buttonMisMediciones =findViewById(R.id.button2);
+        buttonTodasMediciones =findViewById(R.id.button4);
+        buttonPerfil = findViewById(R.id.button5);
+        buttonGreenDeveloper = findViewById(R.id.button3);
+        buttonPrecios = findViewById(R.id.button);
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserActivity.this,PruebaPrecios.class));
+                startActivity(new Intent(UserActivity.this,Perfil.class));
             }
         });
         buttonMisMediciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
+                startActivity(new Intent(UserActivity.this,AppActivity.class));
             }
         });
         buttonTodasMediciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserActivity.this,AppActivity.class));
+                startActivity(new Intent(UserActivity.this,MeasuresActivity.class));
             }
         });
         buttonPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(UserActivity.this,Perfil.class));
+            }
+        });
+        buttonGreenDeveloper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserActivity.this,Perfil.class));
+            }
+        });
+        buttonPrecios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserActivity.this,PruebaPrecios.class));
             }
         });
     }

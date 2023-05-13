@@ -39,7 +39,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder>  {
         Aplicacion app = apps.get(position);
         holder.nombre.setText(app.getNombre());
         holder.cpu.setText(String.valueOf(app.getCpu()));
-        holder.setOnClickListener();
+        holder.setOnClickListener(app.getKey());
     }
 
     @Override
@@ -62,19 +62,21 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder>  {
             button = (Button) itemView.findViewById(R.id.button);
 
         }
-        void setOnClickListener(){
-            button.setOnClickListener(this);
+        void setOnClickListener(final String appKey){
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, MeasuresActivitySingular.class);
+                    intent.putExtra("AppKey", appKey);
+                    context.startActivity(intent);
+                }
+            });
         }
 
         @Override
         public void onClick(View view) {
-            Intent  intent = new Intent(context,MeasuresActivitySingular.class);
-            //intent.putExtra("nombre",itemView.findViewById(R.id.textview_nombre).toString());
-            //Bundle dato = new Bundle();
-            //dato.putString("nombre", "tio Pedro");
-            //intent.putExtras(dato);
-            intent.putExtra("App",nombre.getText());
-            context.startActivity(intent);
+
         }
     }
 }

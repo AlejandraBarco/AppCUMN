@@ -95,17 +95,17 @@ public class MinimoPrecioActivity extends AppCompatActivity {
 
                 String content2 = "";
                 if(data.isCheap())
-                    content2 += "Ahora está barato " + "\n";
+                    content2 += "Está barato " + "\n";
                 else
-                    content2 += "Ahora está caro " + "\n";
+                    content2 += "Está caro " + "\n";
                 txt2.append(content2);
 
 
                 String content3 = "";
                 if(!data.isUnderAvg())
-                    content3 += "Ahora está por encima de la media" + "\n";
+                    content3 += "Está por encima de la media" + "\n";
                 else
-                    content3 += "Ahora está por debajo de la media" + "\n";
+                    content3 += "Está por debajo de la media" + "\n";
                 txt3.append(content3);
 
                 String content4 = "";

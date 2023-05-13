@@ -97,8 +97,13 @@ public class agregarMedicion extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Introduce un valor válido para los codesmells",Toast.LENGTH_SHORT).show();
         }
 
-        Aplicacion aplicacion1 = new Aplicacion(a1,a2,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16);
-        myRef.child("Usuarios").child(mAuth.getCurrentUser().getUid()).child("Aplicaciones").push().setValue(aplicacion1);
+        /*Aplicacion aplicacion1 = new Aplicacion(a1,a2,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16);
+        myRef.child("Usuarios").child(mAuth.getCurrentUser().getUid()).child("Aplicaciones").push().setValue(aplicacion1);*/
+
+        String key = myRef.child("Usuarios").child(mAuth.getCurrentUser().getUid()).child("Aplicaciones").push().getKey();
+        Aplicacion aplicacion1 = new Aplicacion(a1, a2, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16,key);
+        myRef.child("Usuarios").child(mAuth.getCurrentUser().getUid()).child("Aplicaciones").child(key).setValue(aplicacion1);
+
         Toast.makeText(getApplicationContext(),"Datos enviados correctamente",Toast.LENGTH_SHORT).show();
         Intent i = new Intent(agregarMedicion.this,MeasuresActivity.class);
         startActivity(i);

@@ -20,8 +20,12 @@ public class Aplicacion {
     public int duplicatedFiles;
 
     public Double cpu;
-    public Aplicacion(String nombre, String elemento ,String herramienta, String medida, String tamaño, int codelines, int sentencias, int metodos, int clases,
-                      int codesmells, int concretas, int abstractas, int duplicatedLines, int duplicatedFiles,Double cpu) {
+    public String key;
+
+
+
+    public Aplicacion(String nombre, String elemento , String herramienta, String medida, String tamaño, int codelines, int sentencias, int metodos, int clases,
+                      int codesmells, int concretas, int abstractas, int duplicatedLines, int duplicatedFiles, Double cpu, String key) {
         this.nombre = nombre;
         this.elemento = elemento;
         this.herramienta = herramienta;
@@ -37,6 +41,7 @@ public class Aplicacion {
         this.duplicatedLines = duplicatedLines;
         this.duplicatedFiles = duplicatedFiles;
         this.cpu = cpu;
+        this.key = key;
     }
     public Aplicacion() {
     }
@@ -114,6 +119,14 @@ public class Aplicacion {
 
     public Double getCpu() {
         return cpu;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public void setDuplicatedLines(int duplicatedLines) {

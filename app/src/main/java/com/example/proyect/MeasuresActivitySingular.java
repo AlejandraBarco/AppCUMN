@@ -14,7 +14,8 @@ import androidx.annotation.NonNull;
         import android.widget.ArrayAdapter;
         import android.widget.ImageButton;
         import android.widget.ListView;
-        import android.widget.Toast;
+import android.widget.TextView;
+import android.widget.Toast;
 
         import com.google.android.material.floatingactionbutton.FloatingActionButton;
         import com.google.firebase.auth.FirebaseAuth;
@@ -44,11 +45,9 @@ public class MeasuresActivitySingular extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         Bundle extras = getIntent().getExtras();
-        String value = extras.getString("App");
+        String appKey = extras.getString("AppKey");
+        Toast.makeText(getApplicationContext(), "La clave de la aplicación es: " + appKey, Toast.LENGTH_LONG).show();
 
-        Toast.makeText(getApplicationContext(), "El dato es: "+ value, Toast.LENGTH_LONG).show();
-
-        String valor = getIntent().getExtras().getString("usuario");
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,30 +62,34 @@ public class MeasuresActivitySingular extends AppCompatActivity {
             }
         });
 
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        apps = new ArrayList<>();
 
         String id = mAuth.getCurrentUser().getUid();
-        String id1= (String) "-NUvBEcZNbNcfjnqG3C6";
-        //DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(id1);
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones");
+        //String appId = "-NUwHDf0Fqa8KNRIWbn1";
+        DatabaseReference databaseReference =FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(appKey);
 
 
         adapter = new Adapter(apps);
         recyclerView.setAdapter(adapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    String nombre = dataSnapshot.child("nombre").getValue().toString();
-                    String email = dataSnapshot.child("email").getValue().toString();
-                    //textView.setText(nombre);
-                    //editText.setText(email);
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    apps.removeAll(apps);
+                        Aplicacion app = dataSnapshot.getValue(Aplicacion.class);
+                        apps.add(app);
+                    adapter.notifyDataSetChanged();
 
                 }
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void onCancelled(DatabaseError databaseError) {
 
             }
         });
+
     }
 }
