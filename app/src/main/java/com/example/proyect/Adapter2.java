@@ -38,7 +38,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder>  {
     public void onBindViewHolder(@NonNull Adapter2.AppsHolder holder, int position) {
         Aplicacion app = apps.get(position);
         holder.nombre.setText(app.getNombre());
-        holder.cpu.setText(String.valueOf(app.getCpu()));
+        holder.cpu.setText(String.valueOf(app.getCpu())+" vatios");
         holder.setOnClickListener(app.getKey());
     }
 

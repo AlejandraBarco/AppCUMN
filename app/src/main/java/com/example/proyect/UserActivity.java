@@ -56,7 +56,7 @@ public class UserActivity extends AppCompatActivity {
         buttonGreenDeveloper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserActivity.this,Perfil.class));
+                startActivity(new Intent(UserActivity.this,GreenDeveloper.class));
             }
         });
         buttonPrecios.setOnClickListener(new View.OnClickListener() {

@@ -50,7 +50,7 @@ public class agregarMedicion extends AppCompatActivity {
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(agregarMedicion.this,MeasuresActivity.class));
+                startActivity(new Intent(agregarMedicion.this,AppActivity.class));
             }
         });
         button_agregar.setOnClickListener(new View.OnClickListener() {
@@ -105,7 +105,7 @@ public class agregarMedicion extends AppCompatActivity {
         myRef.child("Usuarios").child(mAuth.getCurrentUser().getUid()).child("Aplicaciones").child(key).setValue(aplicacion1);
 
         Toast.makeText(getApplicationContext(),"Datos enviados correctamente",Toast.LENGTH_SHORT).show();
-        Intent i = new Intent(agregarMedicion.this,MeasuresActivity.class);
+        Intent i = new Intent(agregarMedicion.this,AppActivity.class);
         startActivity(i);
         finish();
 

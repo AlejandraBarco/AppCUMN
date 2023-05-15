@@ -52,7 +52,7 @@ public class MeasuresActivitySingular extends AppCompatActivity {
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MeasuresActivitySingular.this,UserActivity.class));
+                startActivity(new Intent(MeasuresActivitySingular.this,AppActivity.class));
             }
         });
         plus.setOnClickListener(new View.OnClickListener() {

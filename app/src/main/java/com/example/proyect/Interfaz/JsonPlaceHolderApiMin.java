@@ -1,4 +1,4 @@
-package com.example.proyect;
+package com.example.proyect.Interfaz;
 
 import com.example.proyect.Model.Data;
 
