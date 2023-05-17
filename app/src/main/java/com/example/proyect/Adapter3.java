@@ -48,7 +48,7 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.AppsHolder>  {
         float progress = (float) (cpuValue / 14.07 * 100);
 
         progressBar.setProgress((int) progress);
-        //este calculo sale de el rango1.2 / 14.07 *100 y el otro del rango2.2 por lo mismo
+
         if (progress < 35.42554708599858) {
             progressBar.setProgressDrawable(ContextCompat.getDrawable(context, R.drawable.progress_bar_green));
             imageView.setImageResource(R.drawable.green);

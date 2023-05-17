@@ -33,7 +33,6 @@ public class MinimoPrecioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_minimo_precio);
         icon = findViewById(R.id.icon);
-        plus = findViewById(R.id.plus);
         Ver = findViewById(R.id.button);
         mJsonTxtView = findViewById(R.id.jsonText);
         txt1 = findViewById(R.id.jsonText1);
@@ -51,12 +50,7 @@ public class MinimoPrecioActivity extends AppCompatActivity {
                 startActivity(new Intent(MinimoPrecioActivity.this,UserActivity.class));
             }
         });
-        plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MinimoPrecioActivity.this, agregarMedicion.class));
-            }
-        });
+
         Ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

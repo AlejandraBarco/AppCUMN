@@ -26,14 +26,12 @@ public class PruebaPrecios extends Activity {
     private TextView min;
     private ImageButton icon;
     private Button Ver;
-    private FloatingActionButton plus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prueba_precios);
         icon = findViewById(R.id.icon);
-        plus = findViewById(R.id.plus);
         Ver = findViewById(R.id.button);
         mJsonTxtView = findViewById(R.id.jsonText);
         txt1 = findViewById(R.id.jsonText1);
@@ -50,12 +48,7 @@ public class PruebaPrecios extends Activity {
                 startActivity(new Intent(PruebaPrecios.this,UserActivity.class));
             }
         });
-        plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(PruebaPrecios.this, agregarMedicion.class));
-            }
-        });
+
         Ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

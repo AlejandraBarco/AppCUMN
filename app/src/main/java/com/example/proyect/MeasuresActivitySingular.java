@@ -46,7 +46,6 @@ public class MeasuresActivitySingular extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         String appKey = extras.getString("AppKey");
-        Toast.makeText(getApplicationContext(), "La clave de la aplicación es: " + appKey, Toast.LENGTH_LONG).show();
 
 
         icon.setOnClickListener(new View.OnClickListener() {
@@ -67,8 +66,8 @@ public class MeasuresActivitySingular extends AppCompatActivity {
         apps = new ArrayList<>();
 
         String id = mAuth.getCurrentUser().getUid();
-        //String appId = "-NUwHDf0Fqa8KNRIWbn1";
-        DatabaseReference databaseReference =FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(appKey);
+        DatabaseReference databaseReference =
+                FirebaseDatabase.getInstance().getReference().child("Usuarios").child(id).child("Aplicaciones").child(appKey);
 
 
         adapter = new Adapter(apps);

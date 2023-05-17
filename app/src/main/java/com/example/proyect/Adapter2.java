@@ -48,7 +48,6 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.AppsHolder>  {
     }
 
     public static class AppsHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        //context
         Context context;
         TextView nombre, cpu;
         Button button;

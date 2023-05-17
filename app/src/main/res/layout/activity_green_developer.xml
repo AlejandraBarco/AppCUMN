@@ -33,7 +33,22 @@ tools:context=".GreenDeveloper">
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.976" />
 
-<androidx.recyclerview.widget.RecyclerView
+    <TextView
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:text="Aplicaciones"
+        android:textColor="#006064"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/recycler"
     android:layout_width="406dp"
     android:layout_height="596dp"

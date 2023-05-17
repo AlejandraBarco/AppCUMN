@@ -8,27 +8,6 @@
     tools:context=".registro">
 
 
-    <!--
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="359dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#006064"
-        android:hint="@string/password"
-        android:imeActionLabel="@string/action_sign_in_short"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="true"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
--->
-
-
     <Button
         android:id="@+id/singin"
         android:layout_width="359dp"
